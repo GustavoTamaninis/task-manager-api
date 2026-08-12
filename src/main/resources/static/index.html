@@ -27,42 +27,21 @@
                             >
                         </div>
                         <div class="col-12 col-md-3 d-grid">
-                            <button type="button" class="btn btn-success btn-lg">Add</button>
+                            <button id="btn-submit" type="button" class="btn btn-success btn-lg">Add</button>
                         </div>
                     </form>
                 </section>
                 <section>
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <h2 class="h5 mb-0">Tasks</h2>
-                        <span class="badge rounded-pill text-bg-success">3 pending tasks</span>
+                        <span class="badge rounded-pill text-bg-success">0 pending tasks</span>
                     </div>
-                    <ul class="list-group list-group-flush rounded-3 overflow-hidden border">
-                        <li class="list-group-item d-flex justify-content-between align-items-center py-3">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="task1">
-                                <label class="form-check-label" for="task1">Task 1</label>
-                            </div>
-                            <button type="button" class="btn btn-outline-success btn-sm">Remove</button>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center py-3">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="task2">
-                                <label class="form-check-label" for="task2">Task 2</label>
-                            </div>
-                            <button type="button" class="btn btn-outline-success btn-sm">Remove</button>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center py-3">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="task3" checked>
-                                <label class="form-check-label text-decoration-line-through text-muted" for="task3">Task 3</label>
-                            </div>
-                            <button type="button" class="btn btn-outline-success btn-sm">Remove</button>
-                        </li>
-                    </ul>
+                    <ul id="all-tasks" class="list-group list-group-flush rounded-3 overflow-hidden border"></ul>
                 </section>
             </div>
         </div>
     </main>
-    <script src="scripts/bootstrap.bundle.min.js.js"></script>
+    <script src="scripts/getAllTasks.js"></script>
+    <script src="scripts/controller.js"></script>
 </body>
 </html>
