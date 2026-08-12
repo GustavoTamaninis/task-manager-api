@@ -11,7 +11,7 @@ public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO) // identifica que esse código ("id") será gerado pelo próprio SGBD.
     // Poderia ter utilizado GenerationType.ENTITY também.
-    private Long id; // investigar o porquê de não usar um tipo primitivo.
+    private Long id; // não foi utilizado um tipo primitivo, pois o id pode ser "null".
     private String title;
     private String description;
 

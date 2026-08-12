@@ -1,0 +1,85 @@
+:root {
+	--brand-green: #31a35f;
+	--brand-green-soft: #183124;
+	--surface-dark: #151c1a;
+	--surface-darker: #111715;
+	--border-dark: #284337;
+}
+
+body {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page-bg {
+	background: linear-gradient(180deg, #101514 0%, #18211f 100%);
+}
+
+.todo-card {
+	max-width: 760px;
+	background-color: var(--surface-dark);
+	border: 1px solid var(--border-dark);
+}
+
+.text-muted {
+	color: #9bb2a7 !important;
+}
+
+.form-control,
+.form-control:focus {
+	background-color: var(--surface-darker);
+	color: #e8f2ed;
+	border-color: var(--border-dark);
+	box-shadow: none;
+}
+
+.form-control::placeholder {
+	color: #7e968a;
+}
+
+.badge.text-bg-success {
+	background-color: #1f8b4e !important;
+}
+
+.form-check-input:checked {
+	background-color: var(--brand-green);
+	border-color: var(--brand-green);
+}
+
+.btn-success {
+	background-color: var(--brand-green);
+	border-color: var(--brand-green);
+	color: #08130d;
+}
+
+.btn-success:hover,
+.btn-success:focus {
+	background-color: #2abf6a;
+	border-color: #2abf6a;
+	color: #06100b;
+}
+
+.list-group-item {
+	background-color: var(--surface-darker);
+	border-color: var(--border-dark);
+	color: #dce9e2;
+}
+
+.list-group-item:hover {
+	background-color: var(--brand-green-soft);
+}
+
+.btn-outline-success {
+	border-color: #2abf6a;
+	color: #63d891;
+}
+
+.btn-outline-success:hover,
+.btn-outline-success:focus {
+	background-color: #2abf6a;
+	border-color: #2abf6a;
+	color: #06100b;
+}
+
+.border {
+	border-color: var(--border-dark) !important;
+}

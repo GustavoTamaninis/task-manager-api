@@ -2,29 +2,27 @@ package com.example.first_api.controller;
 
 import com.example.first_api.entity.Task;
 import com.example.first_api.service.TaskService;
-import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/tasks") // definição de qual rota será escutada.
 public class TaskController {
-    @Autowired // injeção de dependência ou o construtor na linha 20.
+//    @Autowired
     private TaskService taskService; // por ser uma classe de serviço o spring já a implementou.
 
-//        public TaskController(TaskService taskService){
-//            // ao inicializar esse construtor, essa classe já vai implementar taskService:
-//            // é uma alternativa ao @Autowired.
-//            this.taskService = taskService;
-//        }
+        public TaskController(TaskService taskService){
+            // Ao inicializar esse construtor, essa classe já vai implementar taskService:
+            // É uma alternativa mais recomendada que o @Autowired.
+            this.taskService = taskService;
+        }
 
-    @GetMapping // é uma resposta. Neste caso, retorna uma lista.
+    @GetMapping // É uma response. Neste caso, retorna uma lista.
     public ResponseEntity<List<Task>> getAllTasks(){
         List<Task> tasks = taskService.getAllTasks();
         return new ResponseEntity<>(tasks, HttpStatus.OK);
@@ -42,7 +40,7 @@ public class TaskController {
         if(task.isPresent())
             return new ResponseEntity<>(task.get(), HttpStatus.OK);
         else
-            return new ResponseEntity<>(new Task(), HttpStatus.NO_CONTENT);
+            return new ResponseEntity<>(new Task(), HttpStatus.NOT_FOUND);
     }
 
     @PutMapping("{id}")

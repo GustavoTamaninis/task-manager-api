@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body class="text-light">
+    <main class="page-bg min-vh-100 py-5">
+        <div class="container">
+            <div class="todo-card mx-auto shadow-sm rounded-4 p-4 p-md-5">
+                <header class="mb-4">
+                    <h1 class="h3 fw-bold text-success mb-1">Task Manager</h1>
+                    <p class="text-muted mb-0">Organize your daily tasks simply</p>
+                </header>
+                <section class="mb-4">
+                    <form class="row g-2">
+                        <div class="col-12 col-md-9">
+                            <label for="taskInput" class="visually-hidden">Add task</label>
+                            <input
+                                id="taskInput"
+                                type="text"
+                                class="form-control form-control-lg"
+                                placeholder="Enter a new task"
+                            >
+                        </div>
+                        <div class="col-12 col-md-3 d-grid">
+                            <button type="button" class="btn btn-success btn-lg">Add</button>
+                        </div>
+                    </form>
+                </section>
+                <section>
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h2 class="h5 mb-0">Tasks</h2>
+                        <span class="badge rounded-pill text-bg-success">3 pending tasks</span>
+                    </div>
+                    <ul class="list-group list-group-flush rounded-3 overflow-hidden border">
+                        <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="task1">
+                                <label class="form-check-label" for="task1">Task 1</label>
+                            </div>
+                            <button type="button" class="btn btn-outline-success btn-sm">Remove</button>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="task2">
+                                <label class="form-check-label" for="task2">Task 2</label>
+                            </div>
+                            <button type="button" class="btn btn-outline-success btn-sm">Remove</button>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="task3" checked>
+                                <label class="form-check-label text-decoration-line-through text-muted" for="task3">Task 3</label>
+                            </div>
+                            <button type="button" class="btn btn-outline-success btn-sm">Remove</button>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+    <script src="scripts/bootstrap.bundle.min.js.js"></script>
+</body>
+</html>
