@@ -11,23 +11,34 @@
     <main class="page-bg min-vh-100 py-5">
         <div class="container">
             <div class="todo-card mx-auto shadow-sm rounded-4 p-4 p-md-5">
-                <header class="mb-4">
+                <header class="mb-5">
                     <h1 class="h3 fw-bold text-success mb-1">Task Manager</h1>
                     <p class="text-muted mb-0">Organize your daily tasks simply</p>
                 </header>
-                <section class="mb-4">
-                    <form class="row g-2">
-                        <div class="col-12 col-md-9">
-                            <label for="taskInput" class="visually-hidden">Add task</label>
-                            <input
-                                id="taskInput"
-                                type="text"
-                                class="form-control form-control-lg"
-                                placeholder="Enter a new task"
-                            >
+                <section class="mb-5">
+                    <form class="row g-3 task-form">
+                        <div class="col-12 col-md-12">
+                            <div class="mb-3">
+                                <label for="inputTaskTitle" class="form-label task-label">Titulo da tarefa</label>
+                                <input
+                                    id="inputTaskTitle"
+                                    type="text"
+                                    class="form-control form-control-lg task-input"
+                                    placeholder="e.g.: Send weekly report"
+                                >
+                            </div>
+                            <div>
+                                <label for="inputTaskDescription" class="form-label task-label">Description (optional)</label>
+                                <input
+                                    id="inputTaskDescription"
+                                    type="text"
+                                    class="form-control form-control-lg task-input"
+                                    placeholder="Add details"
+                                >
+                            </div>
                         </div>
-                        <div class="col-12 col-md-3 d-grid">
-                            <button id="btn-submit" type="button" class="btn btn-success btn-lg">Add</button>
+                        <div class="col-12 d-flex justify-content-center">
+                            <button id="btnSubmit" type="button" class="btn btn-success btn-lg px-5">Add</button>
                         </div>
                     </form>
                 </section>
@@ -36,12 +47,13 @@
                         <h2 class="h5 mb-0">Tasks</h2>
                         <span class="badge rounded-pill text-bg-success">0 pending tasks</span>
                     </div>
-                    <ul id="all-tasks" class="list-group list-group-flush rounded-3 overflow-hidden border"></ul>
+                    <ul id="allTasks" class="list-group list-group-flush rounded-3 overflow-hidden border"></ul>
                 </section>
             </div>
         </div>
     </main>
     <script src="scripts/getAllTasks.js"></script>
+    <script src="scripts/createTask.js"></script>
     <script src="scripts/controller.js"></script>
 </body>
 </html>

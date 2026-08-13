@@ -32,6 +32,39 @@ body {
 	box-shadow: none;
 }
 
+.task-form {
+	padding: 1rem;
+	border: 1px solid var(--border-dark);
+	border-radius: 0.9rem;
+	background: linear-gradient(180deg, #141b19 0%, #101614 100%);
+}
+
+.task-label {
+	display: inline-block;
+	font-size: 0.86rem;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: #7fd2a1;
+	margin-bottom: 0.45rem;
+}
+
+.task-input {
+	border-width: 1px;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.task-input:hover {
+	border-color: #336b52;
+	background-color: #131b18;
+}
+
+.task-input:focus {
+	border-color: #42b976;
+	box-shadow: 0 0 0 0.2rem rgba(66, 185, 118, 0.18);
+	background-color: #16201c;
+}
+
 .form-control::placeholder {
 	color: #7e968a;
 }
